@@ -1,8 +1,8 @@
 TARGET_CODESIGN = $(shell which ldid)
 
 PLATFORM = iphoneos
-NAME = feather
-SCHEME ?= 'feather (Debug)'
+NAME = pisigner
+SCHEME ?= 'pisigner (Debug)'
 RELEASE = Release-iphoneos
 CONFIGURATION = Release
 

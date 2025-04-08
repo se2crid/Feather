@@ -1,6 +1,6 @@
 /*
   Localizable.strings
-  feather
+  pisigner
 
   Created by ismailcarlik on 04.10.2024.
   
@@ -63,7 +63,7 @@
 "SUCCESS_REQUIRES_RESTART" = "Değişikliklerin etkili olabilmesi için uygulamanın yeniden başlatılması gereklidir.";
 
 // MARK: - Onboarding
-// Welcome to Feather!!!!!!!!
+// Welcome to pisigner!!!!!!!!
 "ONBOARDING_WELCOMETITLE_1" = "Hoş Geldiniz";
 // First feature inside of onboarding
 "ONBOARDING_CELL_1_TITLE" = "Cihazınızdan Yükleme";
@@ -155,7 +155,7 @@
 //
 "APPS_INFORMATION_TITLE_DELETED_FILE" = "Dosya Silindi";
 "APPS_INFORMATION_TITLE_DELETED_FILE_TITLE" = "Dosya silindi.";
-"APPS_INFORMATION_TITLE_DELETED_FILE_DESCRIPTION" = "Bu işe yaramaz bir girdi olup herhangi bir dosyası yoktur. Bu nedenle Feather bunu yüklemenize izin vermez. Uygulamalar sekmesinde hücreyi kaydırarak silmeniz önerilir.";
+"APPS_INFORMATION_TITLE_DELETED_FILE_DESCRIPTION" = "Bu işe yaramaz bir girdi olup herhangi bir dosyası yoktur. Bu nedenle pisigner bunu yüklemenize izin vermez. Uygulamalar sekmesinde hücreyi kaydırarak silmeniz önerilir.";
 // Application Section
 "APPS_INFORMATION_TITLE_NAME" = "Başlık";
 "APPS_INFORMATION_TITLE_VERSION" = "Sürüm";
@@ -240,8 +240,8 @@
 "SETTINGS_VIEW_CONTROLLER_SECTION_TITLE_SIGNING_SERVER" = "İmzalama Sunucusu";
 
 // Footers
-"SETTINGS_VIEW_CONTROLLER_SECTION_FOOTER_ISSUES" = "Feather’da herhangi bir sorun oluşursa lütfen GitHub deposu üzerinden bildirin. Bir sorun gönderirken, tüm günlükleri gönderdiğinizden emin olun.";
-"SETTINGS_VIEW_CONTROLLER_SECTION_FOOTER_SERVER_LIMITATIONS" = "Ne yazık ki kısıtlamalar nedeniyle Feather’ın yerel özelliklerinin düzgün çalışmasını sağlamak için sunucu sertifikalarının her yıl yenilenmesi gerekecektir. En güncel dosyaları depolarımızdan almak için bu düğmeye dokunun.";
+"SETTINGS_VIEW_CONTROLLER_SECTION_FOOTER_ISSUES" = "pisigner’da herhangi bir sorun oluşursa lütfen GitHub deposu üzerinden bildirin. Bir sorun gönderirken, tüm günlükleri gönderdiğinizden emin olun.";
+"SETTINGS_VIEW_CONTROLLER_SECTION_FOOTER_SERVER_LIMITATIONS" = "Ne yazık ki kısıtlamalar nedeniyle pisigner’ın yerel özelliklerinin düzgün çalışmasını sağlamak için sunucu sertifikalarının her yıl yenilenmesi gerekecektir. En güncel dosyaları depolarımızdan almak için bu düğmeye dokunun.";
 "SETTINGS_VIEW_CONTROLLER_SECTION_FOOTER_DEFAULT_SERVER" = "Varsayılan sunucu: %@";
 
 "SETTINGS_VIEW_CONTROLLER_TITLE" = "Server Options";
@@ -249,7 +249,7 @@
 "SETTINGS_VIEW_CONTROLLER_TITLE_LOCAL" = "Local";
 
 // Cell Titles
-// About Feather
+// About pisigner
 "SETTINGS_VIEW_CONTROLLER_CELL_ABOUT" = "%@ Hakkında";
 "SETTINGS_VIEW_CONTROLLER_CELL_SUBMIT_FEEDBACK" = "Geri Bildirim Gönder";
 "SETTINGS_VIEW_CONTROLLER_CELL_GITHUB" = "GitHub Deposu";
@@ -293,7 +293,7 @@
 "DISPLAY_VIEW_CONTROLLER_SECTION_TITLE_APP_APPEARENCE" = "App Appearence";
 
 "DISPLAY_VIEW_CONTROLLER_CELL_DEFAULT_SUBTITLE" = "Varsayılan Alt Başlık";
-"DISPLAY_VIEW_CONTROLLER_CELL_DEFAULT_SUBTITLE_DESCRIPTION" = "Feather için varsayılan stil, yerelleştirilmiş açıklamayı gizler ve yalnızca alt başlığı içerir.";
+"DISPLAY_VIEW_CONTROLLER_CELL_DEFAULT_SUBTITLE_DESCRIPTION" = "pisigner için varsayılan stil, yerelleştirilmiş açıklamayı gizler ve yalnızca alt başlığı içerir.";
 
 "DISPLAY_VIEW_CONTROLLER_CELL_LOCALIZED_SUBTITLE" = "Yerelleştirilmiş Alt Başlık";
 "DISPLAY_VIEW_CONTROLLER_CELL_LOCALIZED_SUBTITLE_DESCRIPTION" = "Alt başlığı uygulama açıklamasıyla değiştirir.";
@@ -351,10 +351,10 @@
 "DONATION_DONATIONS" = "Bağışlar";
 
 "DONATION_CELL_1_TITLE" = "Gizli Depo";
-"DONATION_CELL_1_DESCRIPTION" = "Bağış yaparak gizli depomuza erişin, Feather’a beta erişiminiz olsun.";
+"DONATION_CELL_1_DESCRIPTION" = "Bağış yaparak gizli depomuza erişin, pisigner’a beta erişiminiz olsun.";
 
 "DONATION_CELL_2_TITLE" = "Desteğinizi Gösterin";
-"DONATION_CELL_2_DESCRIPTION" = "Bağış yaparak desteğinizi gösterin! Bağış yapamıyorsanız, Feather’ın işe yaradığı hakkında bilgi yaymak da işe yarar!";
+"DONATION_CELL_2_DESCRIPTION" = "Bağış yaparak desteğinizi gösterin! Bağış yapamıyorsanız, pisigner’ın işe yaradığı hakkında bilgi yaymak da işe yarar!";
 
 
 // MARK: - SettingsViewController -> LogsViewController.swift

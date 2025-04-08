@@ -1,11 +1,11 @@
 //
 //  FRSTableViewController.swift
-//  feather
+//  pisigner
 //
 //  Created by samara on 6.03.2025.
 //
 
-// Feather Settings TableView Controller
+// pisigner Settings TableView Controller
 
 class FRSTableViewController: UITableViewController {
 	var tableData: [[String]] = [[]]

@@ -1,6 +1,6 @@
 /* 
   Localizable.strings
-  feather
+  pisigner
 
   Created by samara on 25.08.2024.
   
@@ -63,7 +63,7 @@
 "SUCCESS_REQUIRES_RESTART" = "You must close the app for changes to take effect.";
 
 // MARK: - Onboarding
-// Welcome to Feather!!!!!!!!
+// Welcome to pisigner!!!!!!!!
 "ONBOARDING_WELCOMETITLE_1" = "Bienvenido a";
 // First feature inside of onboarding
 "ONBOARDING_CELL_1_TITLE" = "Sideload En Dispositivo";
@@ -155,7 +155,7 @@
 //
 "APPS_INFORMATION_TITLE_DELETED_FILE" = "Archivo eliminado";
 "APPS_INFORMATION_TITLE_DELETED_FILE_TITLE" = "El archivo ha sido eliminado.";
-"APPS_INFORMATION_TITLE_DELETED_FILE_DESCRIPTION" = "Esta entrada es inútil, no tiene ningún archivo y Feather no te permitirá instalarla. Se recomienda que la elimines deslizando la celda en la página de Apps.";
+"APPS_INFORMATION_TITLE_DELETED_FILE_DESCRIPTION" = "Esta entrada es inútil, no tiene ningún archivo y pisigner no te permitirá instalarla. Se recomienda que la elimines deslizando la celda en la página de Apps.";
 // Application Section
 "APPS_INFORMATION_TITLE_NAME" = "Nombre";
 "APPS_INFORMATION_TITLE_VERSION" = "Versión";
@@ -220,7 +220,7 @@
 "APP_SIGNING_INPUT_VIEW_CONTROLLER_REMOVE_UISUPPORTEDDEVICES_DESCRIPTION" = "Removes device restrictions for the application.";
 
 "APP_SIGNING_INPUT_VIEW_CONTROLLER_REMOVE_URLSCHEME" = "Remove URLScheme";
-"APP_SIGNING_INPUT_VIEW_CONTROLLER_REMOVE_URLSCHEME_DESCRIPTION" = "Removes any possible URL schemes (i.e. 'feather://')";
+"APP_SIGNING_INPUT_VIEW_CONTROLLER_REMOVE_URLSCHEME_DESCRIPTION" = "Removes any possible URL schemes (i.e. 'pisigner://')";
 
 "APP_SIGNING_INPUT_VIEW_CONTROLLER_REMOVE_ALLOW_BROWSING_DOCUMENTS" = "Allow Browsing Documents";
 "APP_SIGNING_INPUT_VIEW_CONTROLLER_REMOVE_ALLOW_BROWSING_DOCUMENTS_DESCRIPTION" = "Allows other apps to open and edit the files stored in the Documents folder. This option also lets users set the app’s default save location in Settings.";
@@ -280,8 +280,8 @@
 "SETTINGS_VIEW_CONTROLLER_SECTION_TITLE_SIGNING_SERVER" = "Servidor de firmas";
 
 // Footers
-"SETTINGS_VIEW_CONTROLLER_SECTION_FOOTER_ISSUES" = "Si ocurre algún problema con Feather, por favor repórtelo en el repositorio de GitHub. Al reportar un problema, recuerde enviar registros.";
-"SETTINGS_VIEW_CONTROLLER_SECTION_FOOTER_SERVER_LIMITATIONS" = "Desafortunadamente debido a limitaciones los certificados de servidor deberán ser re-renovados cada año para mantener las funciones locales de Feather funcionando correctamente, presione este botón para obtener los archivos actualizados de nuestros repositorios.";
+"SETTINGS_VIEW_CONTROLLER_SECTION_FOOTER_ISSUES" = "Si ocurre algún problema con pisigner, por favor repórtelo en el repositorio de GitHub. Al reportar un problema, recuerde enviar registros.";
+"SETTINGS_VIEW_CONTROLLER_SECTION_FOOTER_SERVER_LIMITATIONS" = "Desafortunadamente debido a limitaciones los certificados de servidor deberán ser re-renovados cada año para mantener las funciones locales de pisigner funcionando correctamente, presione este botón para obtener los archivos actualizados de nuestros repositorios.";
 "SETTINGS_VIEW_CONTROLLER_SECTION_FOOTER_DEFAULT_SERVER" = "Default server goes to %@";
 
 "SETTINGS_VIEW_CONTROLLER_TITLE" = "Server Options";
@@ -289,7 +289,7 @@
 "SETTINGS_VIEW_CONTROLLER_TITLE_LOCAL" = "Local";
 
 // Cell Titles
-// About Feather
+// About pisigner
 "SETTINGS_VIEW_CONTROLLER_CELL_ABOUT" = "Sobre %@";
 "SETTINGS_VIEW_CONTROLLER_CELL_SUBMIT_FEEDBACK" = "Envíar tu opinión";
 "SETTINGS_VIEW_CONTROLLER_CELL_GITHUB" = "Repositorio de GitHub";
@@ -345,7 +345,7 @@
 "DISPLAY_VIEW_CONTROLLER_SECTION_TITLE_APP_APPEARENCE" = "Apariencia de la App";
 
 "DISPLAY_VIEW_CONTROLLER_CELL_DEFAULT_SUBTITLE" = "Subtítulo por Defecto";
-"DISPLAY_VIEW_CONTROLLER_CELL_DEFAULT_SUBTITLE_DESCRIPTION" = "Estilo por defecto de Feather, oculta la descripción localizada y solo incluye el subtítulo.";
+"DISPLAY_VIEW_CONTROLLER_CELL_DEFAULT_SUBTITLE_DESCRIPTION" = "Estilo por defecto de pisigner, oculta la descripción localizada y solo incluye el subtítulo.";
 
 "DISPLAY_VIEW_CONTROLLER_CELL_LOCALIZED_SUBTITLE" = "Subtítulo Localizado";
 "DISPLAY_VIEW_CONTROLLER_CELL_LOCALIZED_SUBTITLE_DESCRIPTION" = "Reemplaza el subtítulo con la descripción de la App.";
@@ -403,10 +403,10 @@
 "DONATION_DONATIONS" = "Donaciones";
 
 "DONATION_CELL_1_TITLE" = "Repo Secreta";
-"DONATION_CELL_1_DESCRIPTION" = "Dona para obtener acceso a nuestra repo secreta, que te dará acceso anticipado a Feather.";
+"DONATION_CELL_1_DESCRIPTION" = "Dona para obtener acceso a nuestra repo secreta, que te dará acceso anticipado a pisigner.";
 
 "DONATION_CELL_2_TITLE" = "Muestra tu Soporte";
-"DONATION_CELL_2_DESCRIPTION" = "¡Muestra tu soporte donando! Si no eres capaz de donar, hacer correr la voz sobre Feather también funciona";
+"DONATION_CELL_2_DESCRIPTION" = "¡Muestra tu soporte donando! Si no eres capaz de donar, hacer correr la voz sobre pisigner también funciona";
 
 // MARK: - SettingsViewController -> LogsViewController.swift
 "LOGS_VIEW_SECTION_TITLE_ERROR" = "%@ Critical Errors.";

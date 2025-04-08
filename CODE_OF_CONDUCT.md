@@ -1,9 +1,9 @@
 # Code of Conduct
 
-Welcome to the Feather Code of Conduct. This document outlines essential guidelines and important information regarding the use of the tool.
+Welcome to the pisigner Code of Conduct. This document outlines essential guidelines and important information regarding the use of the tool.
 
 ## DONT's
-- **Feather is not intended for piracy** and has never been considered as such; so please refrain from engaging in piracy while utilizing this tool.
+- **pisigner is not intended for piracy** and has never been considered as such; so please refrain from engaging in piracy while utilizing this tool.
 
 - **Any type of discrimination is not allowed**, you will be blocked from interacting with the repository if you use this as a way to make fun of other users. 
 

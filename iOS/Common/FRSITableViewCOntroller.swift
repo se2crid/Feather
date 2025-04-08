@@ -1,11 +1,11 @@
 //
 //  FRSITableViewCOntroller.swift
-//  feather
+//  pisigner
 //
 //  Created by samara on 6.03.2025.
 //
 
-// Feather Signing TableView Controller
+// pisigner Signing TableView Controller
 
 class FRSITableViewCOntroller: FRSTableViewController {
 	

@@ -1,6 +1,6 @@
 /*
   Localizable.strings
-  feather
+  pisigner
 
   Created by ZhangYiQiu on 30.11.2024.
   
@@ -63,7 +63,7 @@
 "SUCCESS_REQUIRES_RESTART" = "您必须关闭应用程序才能使更改生效。";
 
 // MARK: - Onboarding
-// Welcome to Feather!!!!!!!!
+// Welcome to pisigner!!!!!!!!
 "ONBOARDING_WELCOMETITLE_1" = "欢迎来到";
 // First feature inside of onboarding
 "ONBOARDING_CELL_1_TITLE" = "设备端侧载";
@@ -155,7 +155,7 @@
 //
 "APPS_INFORMATION_TITLE_DELETED_FILE" = "删除文件";
 "APPS_INFORMATION_TITLE_DELETED_FILE_TITLE" = "文件已删除。";
-"APPS_INFORMATION_TITLE_DELETED_FILE_DESCRIPTION" = "这是一个无用的条目，它没有文件，Feather 不允许您安装它，建议您删除它。";
+"APPS_INFORMATION_TITLE_DELETED_FILE_DESCRIPTION" = "这是一个无用的条目，它没有文件，pisigner 不允许您安装它，建议您删除它。";
 // Application Section
 "APPS_INFORMATION_TITLE_NAME" = "名称";
 "APPS_INFORMATION_TITLE_VERSION" = "版本";
@@ -220,7 +220,7 @@
 "APP_SIGNING_INPUT_VIEW_CONTROLLER_REMOVE_UISUPPORTEDDEVICES_DESCRIPTION" = "移除应用程序的设备限制。";
 
 "APP_SIGNING_INPUT_VIEW_CONTROLLER_REMOVE_URLSCHEME" = "移除 URLScheme";
-"APP_SIGNING_INPUT_VIEW_CONTROLLER_REMOVE_URLSCHEME_DESCRIPTION" = "移除任何可能的 URL 方案（如 “feather://”）。";
+"APP_SIGNING_INPUT_VIEW_CONTROLLER_REMOVE_URLSCHEME_DESCRIPTION" = "移除任何可能的 URL 方案（如 “pisigner://”）。";
 
 "APP_SIGNING_INPUT_VIEW_CONTROLLER_REMOVE_ALLOW_BROWSING_DOCUMENTS" = "允许浏览文件";
 "APP_SIGNING_INPUT_VIEW_CONTROLLER_REMOVE_ALLOW_BROWSING_DOCUMENTS_DESCRIPTION" = "允许其他应用程序打开和编辑文档目录中存储的文件。用户还可通过此选项在 “设置 ”中设置应用程序的默认保存位置。";
@@ -280,8 +280,8 @@
 "SETTINGS_VIEW_CONTROLLER_SECTION_TITLE_SIGNING_SERVER" = "签名服务器";
 
 // Footers
-"SETTINGS_VIEW_CONTROLLER_SECTION_FOOTER_ISSUES" = "如果 Feather 出现任何问题，请通过 GitHub 存储库报告。提交问题时，请务必提交任何日志。";
-"SETTINGS_VIEW_CONTROLLER_SECTION_FOOTER_SERVER_LIMITATIONS" = "由于条件限制，本地服务器证书需要定期重新更新，以保证 Feather 本地安装功能的正常运行，请点击此按钮获取最新文件。";
+"SETTINGS_VIEW_CONTROLLER_SECTION_FOOTER_ISSUES" = "如果 pisigner 出现任何问题，请通过 GitHub 存储库报告。提交问题时，请务必提交任何日志。";
+"SETTINGS_VIEW_CONTROLLER_SECTION_FOOTER_SERVER_LIMITATIONS" = "由于条件限制，本地服务器证书需要定期重新更新，以保证 pisigner 本地安装功能的正常运行，请点击此按钮获取最新文件。";
 "SETTINGS_VIEW_CONTROLLER_SECTION_FOOTER_DEFAULT_SERVER" = "默认服务器为 %@";
 
 "SETTINGS_VIEW_CONTROLLER_TITLE" = "服务器设置";
@@ -289,7 +289,7 @@
 "SETTINGS_VIEW_CONTROLLER_TITLE_LOCAL" = "本地安装";
 
 // Cell Titles
-// About Feather
+// About pisigner
 "SETTINGS_VIEW_CONTROLLER_CELL_ABOUT" = "关于 %@";
 "SETTINGS_VIEW_CONTROLLER_CELL_SUBMIT_FEEDBACK" = "提交反馈";
 "SETTINGS_VIEW_CONTROLLER_CELL_GITHUB" = "GitHub 存储库";
@@ -347,7 +347,7 @@
 "DISPLAY_VIEW_CONTROLLER_SECTION_TITLE_STORE" = "库";
 
 "DISPLAY_VIEW_CONTROLLER_CELL_DEFAULT_SUBTITLE" = "默认";
-"DISPLAY_VIEW_CONTROLLER_CELL_DEFAULT_SUBTITLE_DESCRIPTION" = "Feather 的默认样式，隐藏本地化描述并仅包含副标题。";
+"DISPLAY_VIEW_CONTROLLER_CELL_DEFAULT_SUBTITLE_DESCRIPTION" = "pisigner 的默认样式，隐藏本地化描述并仅包含副标题。";
 
 "DISPLAY_VIEW_CONTROLLER_CELL_LOCALIZED_SUBTITLE" = "显示描述";
 "DISPLAY_VIEW_CONTROLLER_CELL_LOCALIZED_SUBTITLE_DESCRIPTION" = "用应用程序描述替换副标题。";
@@ -405,10 +405,10 @@
 "DONATION_DONATIONS" = "捐赠";
 
 "DONATION_CELL_1_TITLE" = "私密仓库";
-"DONATION_CELL_1_DESCRIPTION" = "通过捐赠获取我们秘密仓库的访问权，将为您提供 Feather 的测试版访问权限。";
+"DONATION_CELL_1_DESCRIPTION" = "通过捐赠获取我们秘密仓库的访问权，将为您提供 pisigner 的测试版访问权限。";
 
 "DONATION_CELL_2_TITLE" = "表达您的支持";
-"DONATION_CELL_2_DESCRIPTION" = "通过捐赠来表达您的支持！如果您无法捐款，宣传 Feather 也很有用！";
+"DONATION_CELL_2_DESCRIPTION" = "通过捐赠来表达您的支持！如果您无法捐款，宣传 pisigner 也很有用！";
 
 // MARK: - SettingsViewController -> LogsViewController.swift
 "LOGS_VIEW_SECTION_TITLE_ERROR" = "%@ 个严重错误。";

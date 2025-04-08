@@ -1,6 +1,6 @@
 //
 //  SigningsViewController.swift
-//  feather
+//  pisigner
 //
 //  Created by samara on 26.10.2024.
 //
@@ -176,7 +176,7 @@ class SigningsViewController: UIViewController {
 	}
 	
 	fileprivate func setupNavigation() {
-		let logoImageView = UIImageView(image: UIImage(named: "feather_glyph"))
+		let logoImageView = UIImageView(image: UIImage(named: "pisigner_glyph"))
 		logoImageView.contentMode = .scaleAspectFit
 		navigationItem.titleView = logoImageView
 		self.navigationController?.navigationBar.prefersLargeTitles = false

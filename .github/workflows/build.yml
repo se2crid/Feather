@@ -42,7 +42,7 @@ jobs:
       - name: Compile f
         run: | 
           $GITHUB_WORKSPACE/Bbuild/prep.sh
-          make package SCHEME="'feather (Release)'"
+          make package SCHEME="'pisigner (Release)'"
           mv packages/* upload/
 
       - name: Install pyupload
@@ -52,7 +52,7 @@ jobs:
       - name: Upload file to Catbox
         id: upload_catbox
         run: |
-          UPLOAD_OUTPUT=$(pyupload upload/feather.ipa --host=catbox)
+          UPLOAD_OUTPUT=$(pyupload upload/pisigner.ipa --host=catbox)
           echo "Upload Output: $UPLOAD_OUTPUT"
           
           LINK=$(echo "$UPLOAD_OUTPUT" | sed -n 's/.*Your link : //p')

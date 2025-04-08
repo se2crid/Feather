@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "33BA378A2BF8159F00FF530A"
-               BuildableName = "feather.app"
-               BlueprintName = "feather"
-               ReferencedContainer = "container:feather.xcodeproj">
+               BuildableName = "pisigner.app"
+               BlueprintName = "pisigner"
+               ReferencedContainer = "container:pisigner.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -44,9 +44,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "33BA378A2BF8159F00FF530A"
-            BuildableName = "feather.app"
-            BlueprintName = "feather"
-            ReferencedContainer = "container:feather.xcodeproj">
+            BuildableName = "pisigner.app"
+            BlueprintName = "pisigner"
+            ReferencedContainer = "container:pisigner.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -61,9 +61,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "33BA378A2BF8159F00FF530A"
-            BuildableName = "feather.app"
-            BlueprintName = "feather"
-            ReferencedContainer = "container:feather.xcodeproj">
+            BuildableName = "pisigner.app"
+            BlueprintName = "pisigner"
+            ReferencedContainer = "container:pisigner.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

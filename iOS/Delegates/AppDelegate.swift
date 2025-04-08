@@ -1,6 +1,6 @@
 //
 //  AppDelegate.swift
-//  feather
+//  pisigner
 //
 //  Created by samara on 5/17/24.
 //  Copyright (c) 2024 Samara M (khcrysalis)
@@ -16,7 +16,7 @@ import UIOnboarding
 
 var downloadTaskManager = DownloadTaskManager.shared
 class AppDelegate: UIResponder, UIApplicationDelegate, UIOnboardingViewControllerDelegate {
-    static let isSideloaded = Bundle.main.bundleIdentifier != "kh.crysalis.feather"
+    static let isSideloaded = Bundle.main.bundleIdentifier != "kh.crysalis.pisigner"
     var window: UIWindow?
     var loaderAlert = presentLoader()
 
@@ -62,11 +62,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UIOnboardingViewControlle
         Debug.shared.log(message: "Version: \(UIDevice.current.systemVersion)")
         Debug.shared.log(message: "Name: \(UIDevice.current.name)")
         Debug.shared.log(message: "Model: \(UIDevice.current.model)")
-        Debug.shared.log(message: "Feather Version: \(logAppVersionInfo())\n")
+        Debug.shared.log(message: "pisigner Version: \(logAppVersionInfo())\n")
 
 		if Preferences.appUpdates {
 			// Register background task
-			BGTaskScheduler.shared.register(forTaskWithIdentifier: "kh.crysalis.feather.sourcerefresh", using: nil) { task in
+			BGTaskScheduler.shared.register(forTaskWithIdentifier: "kh.crysalis.pisigner.sourcerefresh", using: nil) { task in
 				self.handleAppRefresh(task: task as! BGAppRefreshTask)
 			}
 			scheduleAppRefresh()
@@ -88,7 +88,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UIOnboardingViewControlle
     }
 
     func scheduleAppRefresh() {
-        let request = BGAppRefreshTaskRequest(identifier: "kh.crysalis.feather.sourcerefresh")
+        let request = BGAppRefreshTaskRequest(identifier: "kh.crysalis.pisigner.sourcerefresh")
         request.earliestBeginDate = Date(timeIntervalSinceNow: 15 * 60)
 
         do {
@@ -118,7 +118,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UIOnboardingViewControlle
     }
 
     func application(_: UIApplication, open url: URL, options _: [UIApplication.OpenURLOptionsKey: Any] = [:]) -> Bool {
-        if url.scheme == "feather" {
+        if url.scheme == "pisigner" {
             // I know this is super hacky, honestly
             // I don't *exactly* care as it just works :shrug:
             if let config = url.absoluteString.range(of: "/source/") {
@@ -268,10 +268,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UIOnboardingViewControlle
     fileprivate func addDefaultRepos() {
         if !Preferences.defaultRepos {
             CoreDataManager.shared.saveSource(
-                name: "Feather Repository",
-                id: "kh.crysalis.feather-repo",
-                iconURL: URL(string: "https://github.com/khcrysalis/Feather/blob/main/iOS/Icons/Main/Mac%403x.png?raw=true"),
-                url: "https://github.com/khcrysalis/Feather/raw/main/app-repo.json"
+                name: "pisigner Repository",
+                id: "kh.crysalis.pisigner-repo",
+                iconURL: URL(string: "https://github.com/khcrysalis/pisigner/blob/main/iOS/Icons/Main/Mac%403x.png?raw=true"),
+                url: "https://github.com/khcrysalis/pisigner/raw/main/app-repo.json"
             ) { _ in
                 Debug.shared.log(message: "Added default repos!")
                 Preferences.defaultRepos = true
@@ -314,7 +314,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UIOnboardingViewControlle
                 config.urlCache = nil
                 return DataLoader(configuration: config)
             }()
-            let dataCache = try? DataCache(name: "kh.crysalis.feather.datacache") // disk cache
+            let dataCache = try? DataCache(name: "kh.crysalis.pisigner.datacache") // disk cache
             let imageCache = Nuke.ImageCache() // memory cache
             dataCache?.sizeLimit = 500 * 1024 * 1024
             imageCache.costLimit = 100 * 1024 * 1024
@@ -368,7 +368,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UIOnboardingViewControlle
 extension UIOnboardingViewConfiguration {
     static func setUp() -> Self {
         let welcomeToLine = NSMutableAttributedString(string: String.localized("ONBOARDING_WELCOMETITLE_1"))
-        let featherLine = NSMutableAttributedString(string: "Feather", attributes: [
+        let pisignerLine = NSMutableAttributedString(string: "pisigner", attributes: [
             .foregroundColor: UIColor.tintColor,
         ])
 
@@ -404,14 +404,14 @@ extension UIOnboardingViewConfiguration {
         let text = UIOnboardingTextViewConfiguration(
             text: String.localized("ONBOARDING_FOOTER"),
             linkTitle: String.localized("ONBOARDING_FOOTER_LINK"),
-            link: "https://github.com/khcrysalis/feather?tab=readme-ov-file#features",
+            link: "https://github.com/khcrysalis/pisigner?tab=readme-ov-file#features",
             tint: .tintColor
         )
 
         return .init(
             appIcon: .init(named: "AppIcon60x60")!,
             firstTitleLine: welcomeToLine,
-            secondTitleLine: featherLine,
+            secondTitleLine: pisignerLine,
             features: onboardingFeatures,
             featureStyle: featureStyle,
             textViewConfiguration: text,

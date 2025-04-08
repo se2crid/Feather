@@ -34,7 +34,7 @@
 /* Begin PBXFileReference section */
 		331616942C78D55100894427 /* Asspp.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = Asspp.md; sourceTree = "<group>"; };
 		338B0F0C2D0C0E8200C5EA11 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
-		33BA378B2BF8159F00FF530A /* feather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = feather.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		33BA378B2BF8159F00FF530A /* pisigner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = pisigner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		33BDD09F2C76D06900AF6169 /* UIOnboarding.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = UIOnboarding.md; sourceTree = "<group>"; };
 		33BDD0A12C76D0FB00AF6169 /* Ellekit.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = Ellekit.md; sourceTree = "<group>"; };
 		33BE87A62C72F5720044D245 /* SWCompression.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = SWCompression.md; sourceTree = "<group>"; };
@@ -58,14 +58,14 @@
 			membershipExceptions = (
 				Info.plist,
 			);
-			target = 33BA378A2BF8159F00FF530A /* feather */;
+			target = 33BA378A2BF8159F00FF530A /* pisigner */;
 		};
 		338232182D7A77E800999AD3 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				ellekit.deb,
 			);
-			target = 33BA378A2BF8159F00FF530A /* feather */;
+			target = 33BA378A2BF8159F00FF530A /* pisigner */;
 		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
@@ -149,7 +149,7 @@
 		33BA378C2BF8159F00FF530A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				33BA378B2BF8159F00FF530A /* feather.app */,
+				33BA378B2BF8159F00FF530A /* pisigner.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -182,9 +182,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		33BA378A2BF8159F00FF530A /* feather */ = {
+		33BA378A2BF8159F00FF530A /* pisigner */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 33BA379F2BF815A100FF530A /* Build configuration list for PBXNativeTarget "feather" */;
+			buildConfigurationList = 33BA379F2BF815A100FF530A /* Build configuration list for PBXNativeTarget "pisigner" */;
 			buildPhases = (
 				33BA37872BF8159F00FF530A /* Sources */,
 				33BA37882BF8159F00FF530A /* Frameworks */,
@@ -204,7 +204,7 @@
 				338232032D7A77E700999AD3 /* Magic */,
 				338232162D7A77E700999AD3 /* Logging */,
 			);
-			name = feather;
+			name = pisigner;
 			packageProductDependencies = (
 				3322FF4E2BFEE5B9001768D8 /* Nuke */,
 				3322FF502BFEE5B9001768D8 /* NukeExtensions */,
@@ -217,8 +217,8 @@
 				33BDD0A52C76EA4200AF6169 /* UIOnboarding */,
 				33BDD0BF2C7866FE00AF6169 /* Vapor */,
 			);
-			productName = feather;
-			productReference = 33BA378B2BF8159F00FF530A /* feather.app */;
+			productName = pisigner;
+			productReference = 33BA378B2BF8159F00FF530A /* pisigner.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -237,7 +237,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 33BA37862BF8159F00FF530A /* Build configuration list for PBXProject "feather" */;
+			buildConfigurationList = 33BA37862BF8159F00FF530A /* Build configuration list for PBXProject "pisigner" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -268,7 +268,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				33BA378A2BF8159F00FF530A /* feather */,
+				33BA378A2BF8159F00FF530A /* pisigner */,
 			);
 		};
 /* End PBXProject section */
@@ -454,7 +454,7 @@
 				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = iOS/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = Feather;
+				INFOPLIST_KEY_CFBundleDisplayName = pisigner;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright (c) 2024 Samara M (khcrysalis)";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -479,7 +479,7 @@
 					"-w",
 					"-Wno-everything",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = kh.crysalis.feather;
+				PRODUCT_BUNDLE_IDENTIFIER = kh.crysalis.pisigner;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -488,7 +488,7 @@
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "";
 				"SWIFT_ACTIVE_COMPILATION_CONDITIONS[arch=*]" = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "Shared/Magic/feather-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "Shared/Magic/pisigner-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -507,7 +507,7 @@
 				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = iOS/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = Feather;
+				INFOPLIST_KEY_CFBundleDisplayName = pisigner;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright (c) 2024 Samara M (khcrysalis)";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -532,7 +532,7 @@
 					"-w",
 					"-Wno-everything",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = kh.crysalis.feather;
+				PRODUCT_BUNDLE_IDENTIFIER = kh.crysalis.pisigner;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -540,7 +540,7 @@
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "Shared/Magic/feather-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "Shared/Magic/pisigner-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -549,7 +549,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		33BA37862BF8159F00FF530A /* Build configuration list for PBXProject "feather" */ = {
+		33BA37862BF8159F00FF530A /* Build configuration list for PBXProject "pisigner" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				33BA379D2BF815A100FF530A /* Debug */,
@@ -558,7 +558,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		33BA379F2BF815A100FF530A /* Build configuration list for PBXNativeTarget "feather" */ = {
+		33BA379F2BF815A100FF530A /* Build configuration list for PBXNativeTarget "pisigner" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				33BA37A02BF815A100FF530A /* Debug */,

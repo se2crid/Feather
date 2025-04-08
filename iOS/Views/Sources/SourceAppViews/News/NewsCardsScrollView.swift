@@ -1,6 +1,6 @@
 //
 //  NewsCardsScrollView.swift
-//  feather
+//  pisigner
 //
 //  Created by samara on 3.02.2025.
 //

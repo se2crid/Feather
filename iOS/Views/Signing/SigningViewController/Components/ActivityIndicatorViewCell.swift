@@ -1,6 +1,6 @@
 //
 //  ActivityIndicatorViewCell.swift
-//  feather
+//  pisigner
 //
 //  Created by HAHALOSAH on 7/17/24.
 //  Copyright (c) 2024 Samara M (khcrysalis)

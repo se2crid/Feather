@@ -1,6 +1,6 @@
 /* 
   Localizable.strings
-  feather
+  pisigner
 
   Created by samara on 25.08.2024.
   
@@ -63,7 +63,7 @@
 "SUCCESS_REQUIRES_RESTART" = "Вы должны закрыть приложение, чтобы изменения вступили в силу.";
 
 // MARK: - Onboarding
-// Welcome to Feather!!!!!!!!
+// Welcome to pisigner!!!!!!!!
 "ONBOARDING_WELCOMETITLE_1" = "Добро пожаловать в";
 // First feature inside of onboarding
 "ONBOARDING_CELL_1_TITLE" = "Установка приложений из интернета";
@@ -155,7 +155,7 @@
 //
 "APPS_INFORMATION_TITLE_DELETED_FILE" = "Файл удален";
 "APPS_INFORMATION_TITLE_DELETED_FILE_TITLE" = "Файл был удален.";
-"APPS_INFORMATION_TITLE_DELETED_FILE_DESCRIPTION" = "Это бесполезная запись, у нее нет файла, и Feather не позволит вам ее установить. Рекомендуется удалить, проведя пальцем по ячейке во вкладке Приложения.";
+"APPS_INFORMATION_TITLE_DELETED_FILE_DESCRIPTION" = "Это бесполезная запись, у нее нет файла, и pisigner не позволит вам ее установить. Рекомендуется удалить, проведя пальцем по ячейке во вкладке Приложения.";
 // Application Section
 "APPS_INFORMATION_TITLE_NAME" = "Имя";
 "APPS_INFORMATION_TITLE_VERSION" = "Версия";
@@ -223,7 +223,7 @@
 "APP_SIGNING_INPUT_VIEW_CONTROLLER_REMOVE_UISUPPORTEDDEVICES_DESCRIPTION" = "Удаляет ограничения по устройствам для приложения.";
 
 "APP_SIGNING_INPUT_VIEW_CONTROLLER_REMOVE_URLSCHEME" = "Удалить URLScheme";
-"APP_SIGNING_INPUT_VIEW_CONTROLLER_REMOVE_URLSCHEME_DESCRIPTION" = "Удаляет все возможные URL-схемы (например, 'feather://')";
+"APP_SIGNING_INPUT_VIEW_CONTROLLER_REMOVE_URLSCHEME_DESCRIPTION" = "Удаляет все возможные URL-схемы (например, 'pisigner://')";
 
 "APP_SIGNING_INPUT_VIEW_CONTROLLER_REMOVE_ALLOW_BROWSING_DOCUMENTS" = "Разрешить просмотр документов";
 "APP_SIGNING_INPUT_VIEW_CONTROLLER_REMOVE_ALLOW_BROWSING_DOCUMENTS_DESCRIPTION" = "Позволяет другим приложениям открывать и редактировать файлы, хранящиеся в папке Documents. Эта опция также позволяет пользователям устанавливать место сохранения по умолчанию в Настройках.";
@@ -283,8 +283,8 @@
 "SETTINGS_VIEW_CONTROLLER_SECTION_TITLE_SIGNING_SERVER" = "Сервер подписи";
 
 // Footers
-"SETTINGS_VIEW_CONTROLLER_SECTION_FOOTER_ISSUES" = "Если в Feather возникнут какие-либо проблемы, пожалуйста, сообщите о них через GitHub репозиторий. При отправке сообщения об ошибке не забудьте приложить логи.";
-"SETTINGS_VIEW_CONTROLLER_SECTION_FOOTER_SERVER_LIMITATIONS" = "К сожалению, из-за ограничений серверные сертификаты необходимо обновлять каждый год для поддержания работоспособности локальных функций Feather. Нажмите эту кнопку, чтобы получить самые актуальные файлы из наших репозиториев.";
+"SETTINGS_VIEW_CONTROLLER_SECTION_FOOTER_ISSUES" = "Если в pisigner возникнут какие-либо проблемы, пожалуйста, сообщите о них через GitHub репозиторий. При отправке сообщения об ошибке не забудьте приложить логи.";
+"SETTINGS_VIEW_CONTROLLER_SECTION_FOOTER_SERVER_LIMITATIONS" = "К сожалению, из-за ограничений серверные сертификаты необходимо обновлять каждый год для поддержания работоспособности локальных функций pisigner. Нажмите эту кнопку, чтобы получить самые актуальные файлы из наших репозиториев.";
 "SETTINGS_VIEW_CONTROLLER_SECTION_FOOTER_DEFAULT_SERVER" = "Сервер по умолчанию: %@";
 
 "SETTINGS_VIEW_CONTROLLER_TITLE" = "Серверные опции";
@@ -292,7 +292,7 @@
 "SETTINGS_VIEW_CONTROLLER_TITLE_LOCAL" = "Локальный";
 
 // Cell Titles
-// About Feather
+// About pisigner
 "SETTINGS_VIEW_CONTROLLER_CELL_ABOUT" = "О %@";
 "SETTINGS_VIEW_CONTROLLER_CELL_SUBMIT_FEEDBACK" = "Отправить отзыв";
 "SETTINGS_VIEW_CONTROLLER_CELL_GITHUB" = "GitHub репозиторий";
@@ -350,7 +350,7 @@
 "DISPLAY_VIEW_CONTROLLER_SECTION_TITLE_STORE" = "Магазин";
 
 "DISPLAY_VIEW_CONTROLLER_CELL_DEFAULT_SUBTITLE" = "Стандартный подзаголовок";
-"DISPLAY_VIEW_CONTROLLER_CELL_DEFAULT_SUBTITLE_DESCRIPTION" = "Стандартный стиль для Feather, скрывает локализованное описание и показывает только подзаголовок.";
+"DISPLAY_VIEW_CONTROLLER_CELL_DEFAULT_SUBTITLE_DESCRIPTION" = "Стандартный стиль для pisigner, скрывает локализованное описание и показывает только подзаголовок.";
 
 "DISPLAY_VIEW_CONTROLLER_CELL_LOCALIZED_SUBTITLE" = "Локализованный подзаголовок";
 "DISPLAY_VIEW_CONTROLLER_CELL_LOCALIZED_SUBTITLE_DESCRIPTION" = "Заменяет подзаголовок описанием приложения.";
@@ -408,10 +408,10 @@
 "DONATION_DONATIONS" = "Пожертвования";
 
 "DONATION_CELL_1_TITLE" = "Секретный репозиторий";
-"DONATION_CELL_1_DESCRIPTION" = "Получите доступ к нашему секретному репозиторию, сделав пожертвование, это даст вам бета-доступ к Feather.";
+"DONATION_CELL_1_DESCRIPTION" = "Получите доступ к нашему секретному репозиторию, сделав пожертвование, это даст вам бета-доступ к pisigner.";
 
 "DONATION_CELL_2_TITLE" = "Покажите свою поддержку";
-"DONATION_CELL_2_DESCRIPTION" = "Покажите свою поддержку, сделав пожертвование! Если вы не можете пожертвовать, распространение информации о Feather тоже помогает!";
+"DONATION_CELL_2_DESCRIPTION" = "Покажите свою поддержку, сделав пожертвование! Если вы не можете пожертвовать, распространение информации о pisigner тоже помогает!";
 
 // MARK: - SettingsViewController -> LogsViewController.swift
 "LOGS_VIEW_SECTION_TITLE_ERROR" = "%@ критических ошибок.";

@@ -1,6 +1,6 @@
 //
 //  zsign.hpp
-//  feather
+//  pisigner
 //
 //  Created by HAHALOSAH on 5/22/24.
 //

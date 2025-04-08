@@ -1,6 +1,6 @@
 //
 //  SigningsOptionViewController.swift
-//  feather
+//  pisigner
 //
 //  Created by samara on 26.10.2024.
 //
@@ -86,7 +86,7 @@ class SigningsOptionViewController: UITableViewController {
 		self.signingDataWrapper = signingDataWrapper
 		self.application = application
 		self.appsViewController = appsViewController
-		self.toggleOptions = feather.toggleOptions(signingDataWrapper: signingDataWrapper)
+		self.toggleOptions = pisigner.toggleOptions(signingDataWrapper: signingDataWrapper)
 		super.init(style: .insetGrouped)
 		
 		NotificationCenter.default.addObserver(self, selector: #selector(save), name: Notification.Name("saveOptions"), object: nil)

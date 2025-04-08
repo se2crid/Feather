@@ -1,10 +1,10 @@
 
-# Feather
-[![GitHub Release](https://img.shields.io/github/v/release/khcrysalis/feather?include_prereleases)](https://github.com/khcrysalis/feather/releases)
-[![GitHub Downloads (all assets, all releases)](https://img.shields.io/github/downloads/khcrysalis/feather/total)](https://github.com/khcrysalis/feather/releases)
-[![GitHub License](https://img.shields.io/github/license/khcrysalis/feather?color=%23C96FAD)](https://github.com/khcrysalis/feather/blob/main/LICENSE)
+# pisigner
+[![GitHub Release](https://img.shields.io/github/v/release/khcrysalis/pisigner?include_prereleases)](https://github.com/khcrysalis/pisigner/releases)
+[![GitHub Downloads (all assets, all releases)](https://img.shields.io/github/downloads/khcrysalis/pisigner/total)](https://github.com/khcrysalis/pisigner/releases)
+[![GitHub License](https://img.shields.io/github/license/khcrysalis/pisigner?color=%23C96FAD)](https://github.com/khcrysalis/pisigner/blob/main/LICENSE)
 
-Feather allows you to use an Apple Developer Account to sign and install applications on device without needing a computer on stock iOS versions, while allowing easy management with its applications.
+pisigner allows you to use an Apple Developer Account to sign and install applications on device without needing a computer on stock iOS versions, while allowing easy management with its applications.
 
 Due to limitations, it's hard to tell if the application is actually installed, so you will need to keep track of whats on your device. This is an entirely stock application and uses built-in features to be able to do this!
 
@@ -33,17 +33,17 @@ Due to limitations, it's hard to tell if the application is actually installed, 
 - Swift 5.9
 - iOS 15
 
-Feather is not exactly as light as a feather as it needs to include an entire server framework so it can host it's server locally, totaling around 40mb~ when successfully compiled. While this is annoying to me, it doesn't really matter at the end as it does it's job.
+pisigner is not exactly as light as a pisigner as it needs to include an entire server framework so it can host it's server locally, totaling around 40mb~ when successfully compiled. While this is annoying to me, it doesn't really matter at the end as it does it's job.
 
 1. Clone repository
     ```sh
-    git clone https://github.com/khcrysalis/Feather
+    git clone https://github.com/khcrysalis/pisigner
     ```
 
 2. Compile
     ```sh
-    cd Feather
-    gmake package SCHEME="'feather (Release)'" # Build, Use `SCHEME="'feather (Debug)'"` for debug build
+    cd pisigner
+    gmake package SCHEME="'pisigner (Release)'" # Build, Use `SCHEME="'pisigner (Debug)'"` for debug build
     ```
 
 3. Updating
@@ -62,11 +62,11 @@ Using the makefile will automatically create an unsigned ipa inside the packages
 
 ## Star History
 
-<a href="https://star-history.com/#khcrysalis/feather&Date">
+<a href="https://star-history.com/#khcrysalis/pisigner&Date">
  <picture>
-   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=khcrysalis/feather&type=Date&theme=dark" />
-   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=khcrysalis/feather&type=Date" />
-   <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=khcrysalis/feather&type=Date" />
+   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=khcrysalis/pisigner&type=Date&theme=dark" />
+   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=khcrysalis/pisigner&type=Date" />
+   <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=khcrysalis/pisigner&type=Date" />
  </picture>
 </a>
 
@@ -82,7 +82,7 @@ Using the makefile will automatically create an unsigned ipa inside the packages
 
 ## License 
 
-This project is licensed under the GPL-3.0 license. You can see the full details of the license [here](https://github.com/khcrysalis/Feather/blob/main/LICENSE). It's under this specific license because I wanted to make a project that is transparent to the user thats related to Apple Developer Account sideloading, before this project there weren't any open source projects that filled in this gap.
+This project is licensed under the GPL-3.0 license. You can see the full details of the license [here](https://github.com/khcrysalis/pisigner/blob/main/LICENSE). It's under this specific license because I wanted to make a project that is transparent to the user thats related to Apple Developer Account sideloading, before this project there weren't any open source projects that filled in this gap.
 
 By contributing to this project, you agree to license your code under the GPL-3.0 license as well, ensuring that your work, like all other contributions, remains freely accessible and open.
 

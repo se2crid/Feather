@@ -1,6 +1,6 @@
 //
 //  SettingsViewController.swift
-//  feather
+//  pisigner
 //
 //  Created by samara on 7/7/24.
 //  Copyright (c) 2024 Samara M (khcrysalis)
@@ -12,7 +12,7 @@ import SwiftUI
 
 class SettingsViewController: FRSTableViewController {
 	let aboutSection = [
-		String.localized("SETTINGS_VIEW_CONTROLLER_CELL_ABOUT", arguments: "Feather"),
+		String.localized("SETTINGS_VIEW_CONTROLLER_CELL_ABOUT", arguments: "pisigner"),
 		String.localized("SETTINGS_VIEW_CONTROLLER_CELL_SUBMIT_FEEDBACK"),
 		String.localized("SETTINGS_VIEW_CONTROLLER_CELL_GITHUB")
 	]
@@ -100,7 +100,7 @@ extension SettingsViewController {
 		}
 		
 		switch section {
-		case sectionTitles.count - 1: return "Feather \(AppDelegate().logAppVersionInfo()) • iOS \(UIDevice.current.systemVersion)"
+		case sectionTitles.count - 1: return "pisigner \(AppDelegate().logAppVersionInfo()) • iOS \(UIDevice.current.systemVersion)"
 		default:
 			return nil
 		}
@@ -120,7 +120,7 @@ extension SettingsViewController {
 			cell = DonationTableViewCell(style: .default, reuseIdentifier: "D")
 			cell.selectionStyle = .none
 			
-		case String.localized("SETTINGS_VIEW_CONTROLLER_CELL_ABOUT", arguments: "Feather"):
+		case String.localized("SETTINGS_VIEW_CONTROLLER_CELL_ABOUT", arguments: "pisigner"):
 			cell.setAccessoryIcon(with: "info.circle")
 			cell.selectionStyle = .default
 		case String.localized("SETTINGS_VIEW_CONTROLLER_CELL_SUBMIT_FEEDBACK"), String.localized("SETTINGS_VIEW_CONTROLLER_CELL_GITHUB"):
@@ -182,17 +182,17 @@ extension SettingsViewController {
 	override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 		let itemTapped = tableData[indexPath.section][indexPath.row]
 		switch itemTapped {
-		case String.localized("SETTINGS_VIEW_CONTROLLER_CELL_ABOUT", arguments: "Feather"):
+		case String.localized("SETTINGS_VIEW_CONTROLLER_CELL_ABOUT", arguments: "pisigner"):
 			let l = AboutViewController()
 			navigationController?.pushViewController(l, animated: true)
 		case String.localized("SETTINGS_VIEW_CONTROLLER_CELL_GITHUB"):
-			guard let url = URL(string: "https://github.com/khcrysalis/Feather") else {
+			guard let url = URL(string: "https://github.com/khcrysalis/pisigner") else {
 				Debug.shared.log(message: "Invalid URL")
 				return
 			}
 			UIApplication.shared.open(url, options: [:], completionHandler: nil)
 		case String.localized("SETTINGS_VIEW_CONTROLLER_CELL_SUBMIT_FEEDBACK"):
-			guard let url = URL(string: "https://github.com/khcrysalis/Feather/issues") else {
+			guard let url = URL(string: "https://github.com/khcrysalis/pisigner/issues") else {
 				Debug.shared.log(message: "Invalid URL")
 				return
 			}

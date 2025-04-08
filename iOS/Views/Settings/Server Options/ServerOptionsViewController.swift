@@ -1,6 +1,6 @@
 //
 //  ServerOptionsViewController.swift
-//  feather
+//  pisigner
 //
 //  Created by samara on 22.10.2024.
 //  Copyright (c) 2024 Samara M (khcrysalis)

@@ -1,6 +1,6 @@
 //
 //  AboutViewController.swift
-//  feather
+//  pisigner
 //
 //  Created by samara on 7/10/24.
 //  Copyright (c) 2024 Samara M (khcrysalis)
@@ -48,7 +48,7 @@ class AboutViewController: FRSTableViewController {
 			tableData[3] = fileNames
 		}
 		
-		let creditsURL = URL(string: "https://raw.githubusercontent.com/khcrysalis/project-credits/refs/heads/main/feather/credits.json")!
+		let creditsURL = URL(string: "https://raw.githubusercontent.com/khcrysalis/project-credits/refs/heads/main/pisigner/credits.json")!
 		let sponsorsURL = URL(string: "https://raw.githubusercontent.com/khcrysalis/project-credits/refs/heads/main/sponsors/credits.json")!
 		
 		getURL(url: creditsURL) { result in
@@ -97,7 +97,7 @@ class AboutViewController: FRSTableViewController {
 
 	
 	@objc func shareButtonTapped() {
-		let shareText = "Feather - https://github.com/khcrysalis/feather"
+		let shareText = "pisigner - https://github.com/khcrysalis/pisigner"
 		let activityViewController = UIActivityViewController(activityItems: [shareText], applicationActivities: nil)
 		
 		if let popoverController = activityViewController.popoverPresentationController {

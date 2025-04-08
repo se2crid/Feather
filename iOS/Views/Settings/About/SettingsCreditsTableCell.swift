@@ -1,6 +1,6 @@
 //
 //  SettingsCreditsTableCell.swift
-//  feather
+//  pisigner
 //
 //  Created by samara on 7/10/24.
 //  Copyright (c) 2024 Samara M (khcrysalis)

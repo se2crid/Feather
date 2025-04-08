@@ -1,5 +1,5 @@
 name: Create Feature Request
-description: Request a feature for Feather
+description: Request a feature for pisigner
 labels: [enhancement]
 body:
   - type: textarea
@@ -7,7 +7,7 @@ body:
     attributes:
       label: Feature Description
       description:
-      placeholder: I want ... to be added to Feather, because ...
+      placeholder: I want ... to be added to pisigner, because ...
     validations:
       required: true
   - type: textarea

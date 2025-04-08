@@ -1,6 +1,6 @@
 //
 //  ViewController.swift
-//  feather
+//  pisigner
 //
 //  Created by samara on 5/17/24.
 //  Copyright (c) 2024 Samara M (khcrysalis)
@@ -123,7 +123,7 @@ extension SourcesViewController {
 			
 			cell.textLabel?.text = source.name ?? String.localized("UNKNOWN")
 			
-			if source.identifier == "kh.crysalis.feather-repo.beta" {
+			if source.identifier == "kh.crysalis.pisigner-repo.beta" {
 				cell.detailTextLabel?.text = "Thank you for donating!"
 			} else {
 				cell.detailTextLabel?.text = source.sourceURL?.absoluteString
@@ -149,7 +149,7 @@ extension SourcesViewController {
 			let configuration = UIContextMenuConfiguration(identifier: nil, actionProvider: { _ in
 				return UIMenu(title: "", image: nil, identifier: nil, options: [], children: [
 					UIAction(title: String.localized("COPY"), image: UIImage(systemName: "doc.on.clipboard"), handler: {_ in
-						if source.identifier == "kh.crysalis.feather-repo.beta" {
+						if source.identifier == "kh.crysalis.pisigner-repo.beta" {
 							UIPasteboard.general.string = "Thank you for donating!"
 						} else {
 							UIPasteboard.general.string = source.sourceURL?.absoluteString

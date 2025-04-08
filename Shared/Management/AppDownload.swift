@@ -1,6 +1,6 @@
 //
 //  AppDownload.swift
-//  feather
+//  pisigner
 //
 //  Created by samara on 6/29/24.
 //  Copyright (c) 2024 Samara M (khcrysalis)
@@ -137,7 +137,7 @@ class AppDownload: NSObject {
 
 	func addToApps(bundlePath: String, uuid: String, sourceLocation: String? = nil, completion: @escaping (Error?) -> Void) {
 		guard let bundle = Bundle(path: bundlePath) else {
-			let error = NSError(domain: "Feather", code: 1, userInfo: [NSLocalizedDescriptionKey: "Failed to load bundle at \(bundlePath)"])
+			let error = NSError(domain: "pisigner", code: 1, userInfo: [NSLocalizedDescriptionKey: "Failed to load bundle at \(bundlePath)"])
 			completion(error)
 			return
 		}
@@ -165,7 +165,7 @@ class AppDownload: NSObject {
 
 			completion(nil)
 		} else {
-			let error = NSError(domain: "Feather", code: 3, userInfo: [NSLocalizedDescriptionKey: "Info.plist not found in bundle at \(bundlePath)"])
+			let error = NSError(domain: "pisigner", code: 3, userInfo: [NSLocalizedDescriptionKey: "Info.plist not found in bundle at \(bundlePath)"])
 			completion(error)
 		}
 	}

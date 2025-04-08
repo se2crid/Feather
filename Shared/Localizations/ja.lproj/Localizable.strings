@@ -1,6 +1,6 @@
 /* 
   Localizable.strings
-  feather
+  pisigner
 
   Created by samara on 25.08.2024.
   
@@ -63,7 +63,7 @@
 "SUCCESS_REQUIRES_RESTART" = "変更を反映させるにはアプリを再起動する必要があります";
 
 // MARK: - Onboarding
-// Welcome to Feather!!!!!!!!
+// Welcome to pisigner!!!!!!!!
 "ONBOARDING_WELCOMETITLE_1" = "ようこそ";
 // First feature inside of onboarding
 "ONBOARDING_CELL_1_TITLE" = "デバイスだけでサイドロード";
@@ -155,7 +155,7 @@
 //
 "APPS_INFORMATION_TITLE_DELETED_FILE" = "削除されたファイル";
 "APPS_INFORMATION_TITLE_DELETED_FILE_TITLE" = "ファイルは削除されました。";
-"APPS_INFORMATION_TITLE_DELETED_FILE_DESCRIPTION" = "これは役に立たないエントリーです。ファイルを持っておらず、Featherはインストールを許可しません。Appsタブのセルをスワイプして削除することをおすすめします。";
+"APPS_INFORMATION_TITLE_DELETED_FILE_DESCRIPTION" = "これは役に立たないエントリーです。ファイルを持っておらず、pisignerはインストールを許可しません。Appsタブのセルをスワイプして削除することをおすすめします。";
 // Application Section
 "APPS_INFORMATION_TITLE_NAME" = "名前";
 "APPS_INFORMATION_TITLE_VERSION" = "バージョン";
@@ -223,7 +223,7 @@
 "APP_SIGNING_INPUT_VIEW_CONTROLLER_REMOVE_UISUPPORTEDDEVICES_DESCRIPTION" = "デバイスの制限を解除します。";
 
 "APP_SIGNING_INPUT_VIEW_CONTROLLER_REMOVE_URLSCHEME" = "URLスキームを削除";
-"APP_SIGNING_INPUT_VIEW_CONTROLLER_REMOVE_URLSCHEME_DESCRIPTION" = "URLスキームを削除する。(例:feather://)";
+"APP_SIGNING_INPUT_VIEW_CONTROLLER_REMOVE_URLSCHEME_DESCRIPTION" = "URLスキームを削除する。(例:pisigner://)";
 
 "APP_SIGNING_INPUT_VIEW_CONTROLLER_REMOVE_ALLOW_BROWSING_DOCUMENTS" = "Documentsの閲覧を許可する";
 "APP_SIGNING_INPUT_VIEW_CONTROLLER_REMOVE_ALLOW_BROWSING_DOCUMENTS_DESCRIPTION" = "他のアプリがDocumentsフォルダに保存されたファイルを開いて編集できるようにします。このオプションはアプリのデフォルト保存場所を設定することもできます。";
@@ -280,8 +280,8 @@
 "SETTINGS_VIEW_CONTROLLER_SECTION_TITLE_SIGNING_SERVER" = "署名サーバー";
 
 // Footers
-"SETTINGS_VIEW_CONTROLLER_SECTION_FOOTER_ISSUES" = "Feather で問題が発生した場合は、GitHub リポジトリから報告してください。 その際、ログがあれば必ず提出してください。";
-"SETTINGS_VIEW_CONTROLLER_SECTION_FOOTER_SERVER_LIMITATIONS" = "残念ながら、サーバー証明書の制限により、Feathersのローカル機能を正常に動作させるためには、サーバー証明書を毎年更新する必要があります。このボタンをタップすると、リポジトリから最新のファイルを取得できます。";
+"SETTINGS_VIEW_CONTROLLER_SECTION_FOOTER_ISSUES" = "pisigner で問題が発生した場合は、GitHub リポジトリから報告してください。 その際、ログがあれば必ず提出してください。";
+"SETTINGS_VIEW_CONTROLLER_SECTION_FOOTER_SERVER_LIMITATIONS" = "残念ながら、サーバー証明書の制限により、pisignersのローカル機能を正常に動作させるためには、サーバー証明書を毎年更新する必要があります。このボタンをタップすると、リポジトリから最新のファイルを取得できます。";
 "SETTINGS_VIEW_CONTROLLER_SECTION_FOOTER_DEFAULT_SERVER" = "デフォルトのサーバーは %@ です。";
 
 "SETTINGS_VIEW_CONTROLLER_TITLE" = "サーバーのオプション";
@@ -289,7 +289,7 @@
 "SETTINGS_VIEW_CONTROLLER_TITLE_LOCAL" = "ローカル";
 
 // Cell Titles
-// About Feather
+// About pisigner
 "SETTINGS_VIEW_CONTROLLER_CELL_ABOUT" = "%@について";
 "SETTINGS_VIEW_CONTROLLER_CELL_SUBMIT_FEEDBACK" = "フィードバックを提出";
 "SETTINGS_VIEW_CONTROLLER_CELL_GITHUB" = "GitHubリポジトリ";
@@ -347,7 +347,7 @@
 "DISPLAY_VIEW_CONTROLLER_SECTION_TITLE_STORE" = "ストア";
 
 "DISPLAY_VIEW_CONTROLLER_CELL_DEFAULT_SUBTITLE" = "デフォルトのサブタイトル";
-"DISPLAY_VIEW_CONTROLLER_CELL_DEFAULT_SUBTITLE_DESCRIPTION" = "featherのデフォルトスタイルです。ローカライズされた説明を隠してサブタイトルのみ含ませる。";
+"DISPLAY_VIEW_CONTROLLER_CELL_DEFAULT_SUBTITLE_DESCRIPTION" = "pisignerのデフォルトスタイルです。ローカライズされた説明を隠してサブタイトルのみ含ませる。";
 
 "DISPLAY_VIEW_CONTROLLER_CELL_LOCALIZED_SUBTITLE" = "ローカライズされたサブタイトル";
 "DISPLAY_VIEW_CONTROLLER_CELL_LOCALIZED_SUBTITLE_DESCRIPTION" = "サブタイトルをアプリの説明に置き換える。";
@@ -408,7 +408,7 @@
 "DONATION_CELL_1_DESCRIPTION" = "寄付をするとシークレットリポジトリにアクセスでき、beta版へのアクセスを得ることができます。";
 
 "DONATION_CELL_2_TITLE" = "あなたのサポートを示す";
-"DONATION_CELL_2_DESCRIPTION" = "寄付をするとあなたのサポートを示せます！寄付ができない場合、Featherを周りの人に広めてください！";
+"DONATION_CELL_2_DESCRIPTION" = "寄付をするとあなたのサポートを示せます！寄付ができない場合、pisignerを周りの人に広めてください！";
 
 // MARK: - SettingsViewController -> LogsViewController.swift
 "LOGS_VIEW_SECTION_TITLE_ERROR" = "%@ 重大なエラー";

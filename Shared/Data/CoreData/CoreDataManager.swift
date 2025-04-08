@@ -1,6 +1,6 @@
 //
 //  CDManager.swift
-//  feather
+//  pisigner
 //
 //  Created by samara on 7/29/24.
 //  Copyright (c) 2024 Samara M (khcrysalis)
@@ -16,7 +16,7 @@ final class CoreDataManager {
 	deinit {}
 	
 	lazy var persistentContainer: NSPersistentContainer = {
-		let container = NSPersistentContainer(name: "Feather")
+		let container = NSPersistentContainer(name: "pisigner")
 		container.loadPersistentStores(completionHandler: { (storeDescription, error) in
 			if let error = error as NSError? {
 				fatalError("Unresolved error \(error), \(error.userInfo)")

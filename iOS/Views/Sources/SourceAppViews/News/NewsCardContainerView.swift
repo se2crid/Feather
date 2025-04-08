@@ -1,6 +1,6 @@
 //
 //  NewsCardContainerView.swift
-//  feather
+//  pisigner
 //
 //  Created by samara on 4.02.2025.
 //

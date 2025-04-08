@@ -1,6 +1,6 @@
 //
 //  IconsListViewController.swift
-//  feather
+//  pisigner
 //
 //  Created by samara on 8/11/24.
 //  Copyright (c) 2024 Samara M (khcrysalis)
@@ -17,13 +17,13 @@ class IconsListViewController: UITableViewController {
 	
 	var sections: [String: [AltIcon]] = [
 		"Main": [
-			AltIcon(displayName: "Feather", author: "Samara", key: nil, image: altImage("AppIcon60x60")),
-			AltIcon(displayName: "macOS Feather", author: "Samara", key: "Mac", image: altImage("Mac")),
-			AltIcon(displayName: "Evil Feather", author: "Samara", key: "Evil", image: altImage("Evil")),
-			AltIcon(displayName: "Classic Feather", author: "Samara", key: "Early", image: altImage("Early"))
+			AltIcon(displayName: "pisigner", author: "Samara", key: nil, image: altImage("AppIcon60x60")),
+			AltIcon(displayName: "macOS pisigner", author: "Samara", key: "Mac", image: altImage("Mac")),
+			AltIcon(displayName: "Evil pisigner", author: "Samara", key: "Evil", image: altImage("Evil")),
+			AltIcon(displayName: "Classic pisigner", author: "Samara", key: "Early", image: altImage("Early"))
 		],
 		"Wingio": [
-			AltIcon(displayName: "Feather", author: "Wingio", key: "Wing", image: altImage("Wing")),
+			AltIcon(displayName: "pisigner", author: "Wingio", key: "Wing", image: altImage("Wing")),
 		]
 	]
 	

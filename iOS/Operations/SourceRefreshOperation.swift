@@ -2,7 +2,7 @@ import CoreData
 import Foundation
 
 @objc class SourceRefreshOperation: Operation, @unchecked Sendable {
-    private let queue = DispatchQueue(label: "kh.crysalis.feather.sourcerefresh", qos: .userInitiated)
+    private let queue = DispatchQueue(label: "kh.crysalis.pisigner.sourcerefresh", qos: .userInitiated)
     private let isDebugMode: Bool = {
         var isDebug = false
         assert({
@@ -64,7 +64,7 @@ import Foundation
     }
 
     private func checkForUpdates(with sourceData: [(data: SourcesData, url: URL)]) {
-        let coreDataQueue = DispatchQueue(label: "kh.crysalis.feather.coredata", qos: .userInitiated)
+        let coreDataQueue = DispatchQueue(label: "kh.crysalis.pisigner.coredata", qos: .userInitiated)
         
         coreDataQueue.sync {
             let signedApps = CoreDataManager.shared.getDatedSignedApps()
@@ -193,7 +193,7 @@ import Foundation
                             "version": "999.0.0",
                             "date": "2024-11-1T18:35:10Z",
                             "size": 12375230,
-                            "downloadURL": "https://github.com/khcrysalis/Feather/releases/download/v1.1.3/feather_v1.1.3.ipa"
+                            "downloadURL": "https://github.com/khcrysalis/pisigner/releases/download/v1.1.3/pisigner_v1.1.3.ipa"
                         }
                     ]
                 }]

@@ -1,6 +1,6 @@
 //
 //  UIUserInterfaceStyle+allCases.swift
-//  feather
+//  pisigner
 //
 //  Created by samara on 25.08.2024.
 //

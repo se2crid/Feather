@@ -20,24 +20,24 @@ jobs:
       - name: Compile f
         run: | 
           mkdir upload
-          make package SCHEME="'feather (Release)'"
+          make package SCHEME="'pisigner (Release)'"
           mv packages/* upload/
 
       - name: Get Version Number
         id: get_version
         run: |
-          VERSION=$( /usr/libexec/PlistBuddy -c "Print CFBundleShortVersionString" Payload/feather.app/Info.plist )
+          VERSION=$( /usr/libexec/PlistBuddy -c "Print CFBundleShortVersionString" Payload/pisigner.app/Info.plist )
           echo "VERSION=${VERSION}" >> $GITHUB_ENV
 
       - name: Setup
         run: |
-          mv upload/feather.ipa upload/feather_v${VERSION}.ipa
-          cp upload/feather_v${VERSION}.ipa upload/feather_v${VERSION}.tipa
+          mv upload/pisigner.ipa upload/pisigner_v${VERSION}.ipa
+          cp upload/pisigner_v${VERSION}.ipa upload/pisigner_v${VERSION}.tipa
 
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v2
         with:
-          name: Feather v${{ env.VERSION }}
+          name: pisigner v${{ env.VERSION }}
           tag_name: v${{ env.VERSION }}
           files: |
             upload/*ipa

@@ -1,6 +1,6 @@
 //
 //  Preferences.swift
-//  feather
+//  pisigner
 //
 //  Created by samara on 5/17/24.
 //  Copyright (c) 2024 Samara M (khcrysalis)
@@ -13,47 +13,47 @@ enum Preferences {
 	static var installPathChangedCallback: ((String?) -> Void)?
 	static let defaultInstallPath: String = "https://api.palera.in"
 	
-	@Storage(key: "Feather.UserSpecifiedOnlinePath", defaultValue: defaultInstallPath)
+	@Storage(key: "pisigner.UserSpecifiedOnlinePath", defaultValue: defaultInstallPath)
 	static var onlinePath: String? { didSet { installPathChangedCallback?(onlinePath) } }
 	
-	@Storage(key: "Feather.UserSelectedServer", defaultValue: false)
+	@Storage(key: "pisigner.UserSelectedServer", defaultValue: false)
 	static var userSelectedServer: Bool
 	
-	@Storage(key: "Feather.DefaultRepos", defaultValue: false)
+	@Storage(key: "pisigner.DefaultRepos", defaultValue: false)
 	// Default repo is from the repository
 	static var defaultRepos: Bool
 	
-	@Storage(key: "Feather.AppUpdates", defaultValue: false)
+	@Storage(key: "pisigner.AppUpdates", defaultValue: false)
 	// Default repo is from the repository
 	static var appUpdates: Bool
 	
-	@Storage(key: "Feather.gotSSLCerts", defaultValue: false)
+	@Storage(key: "pisigner.gotSSLCerts", defaultValue: false)
 	static var gotSSLCerts: Bool
 	
-	@Storage(key: "Feather.BDefaultRepos", defaultValue: false)
+	@Storage(key: "pisigner.BDefaultRepos", defaultValue: false)
 	// Default beta repo is from the repository
 	static var bDefaultRepos: Bool
 	
-	@Storage(key: "Feather.userIntefacerStyle", defaultValue: UIUserInterfaceStyle.unspecified.rawValue)
+	@Storage(key: "pisigner.userIntefacerStyle", defaultValue: UIUserInterfaceStyle.unspecified.rawValue)
 	static var preferredInterfaceStyle: Int
 	
-	@CodableStorage(key: "Feather.AppTintColor", defaultValue: CodableColor(UIColor(hex: "848ef9")))
+	@CodableStorage(key: "pisigner.AppTintColor", defaultValue: CodableColor(UIColor(hex: "848ef9")))
 	static var appTintColor: CodableColor
 	
-	@Storage(key: "Feather.OnboardingActive", defaultValue: true)
+	@Storage(key: "pisigner.OnboardingActive", defaultValue: true)
 	static var isOnboardingActive: Bool
 	
-	@Storage(key: "Feather.selectedCert", defaultValue: 0)
+	@Storage(key: "pisigner.selectedCert", defaultValue: 0)
 	static var selectedCert: Int
 	
-	@Storage(key: "Feather.ppqcheckBypass", defaultValue: "")
+	@Storage(key: "pisigner.ppqcheckBypass", defaultValue: "")
 	// random string
 	static var pPQCheckString: String
 	
-	@Storage(key: "Feather.CertificateTitleAppIDtoTeamID", defaultValue: false)
+	@Storage(key: "pisigner.CertificateTitleAppIDtoTeamID", defaultValue: false)
 	static var certificateTitleAppIDtoTeamID: Bool
 	
-	@Storage(key: "Feather.AppDescriptionAppearence", defaultValue: 0)
+	@Storage(key: "pisigner.AppDescriptionAppearence", defaultValue: 0)
 	// 0 == Default appearence
 	// 1 == Replace subtitle with localizedDescription
 	// 2 == Move localizedDescription below app icon, and above screenshots
@@ -63,7 +63,7 @@ enum Preferences {
 	/// Preferred language
 	static var preferredLanguageCode: String?
 	
-	@Storage(key: "Feather.Beta", defaultValue: false)
+	@Storage(key: "pisigner.Beta", defaultValue: false)
 	//
 	static var beta: Bool
 	
