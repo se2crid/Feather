@@ -17,7 +17,6 @@ class LibraryViewController: UITableViewController {
 	var filteredSignedApps: [SignedApps] = []
 	var filteredDownloadedApps: [DownloadedApps] = []
 	
-	var installer: Installer?
 	
 	public var searchController: UISearchController!
 	var popupVC: PopupViewController!
@@ -390,7 +389,8 @@ extension LibraryViewController {
 					button2.onTap = { [weak self] in
 						guard let self = self else { return }
 						self.popupVC.dismiss(animated: true)
-						self.shareFile(meow: source!, filePath: filePath?.path ?? "")
+                        self.startInstallProcess(meow: source!, filePath: filePath?.path ?? "")
+						// self.shareFile(meow: source!, filePath: filePath?.path ?? "")
 					}
 					
 					popupVC.configureButtons([button1, button4, button3, button2])

@@ -218,51 +218,13 @@ extension LibraryViewController {
 		let name = (meow.value(forKey: "name") as? String) ?? "UnknownApp"
 		let id = (meow.value(forKey: "bundleidentifier") as? String) ?? "stupidfucking.shit"
 		let version = (meow.value(forKey: "version") as? String) ?? "1.0"
+        
+        startInstallation(ipaPath: filePath) { cool in
+            if let cool {
+                print("error :( \(cool)")
+            }
+        }
 		
-		self.presentTransferPreview(with: filePath, id: id, version: version, name: name)
+		// self.presentTransferPreview(with: filePath, id: id, version: version, name: name)
 	}
-	
-	@objc func shareFile(meow: NSManagedObject, filePath: String) {
-		UIApplication.shared.isIdleTimerDisabled = true
-		
-		let name = (meow.value(forKey: "name") as? String) ?? "UnknownApp"
-		let id = (meow.value(forKey: "bundleidentifier") as? String) ?? "stupidfucking.shit"
-		let version = (meow.value(forKey: "version") as? String) ?? "1.0"
-		
-		self.presentTransferPreview(with: filePath, isSharing: true, id: id, version: version, name: name)
-	}
-	
-	func presentTransferPreview(with appPath: String, isSharing: Bool? = false, id: String, version: String, name: String) {
-		do {
-			self.installer = try Installer(
-				path: nil,
-				metadata: AppData(id: id, version: Int(version) ?? Int(1.0), name: name)
-			)
-			
-			let transferPreview = TransferPreview(installer: self.installer!, appPath: appPath, appName: name, isSharing: isSharing ?? false)
-				.onDisappear {
-					self.installer?.shutdownServer()
-					self.installer = nil
-					UIApplication.shared.isIdleTimerDisabled = true
-				}
-			
-			let hostingController = UIHostingController(rootView: transferPreview)
-			hostingController.modalPresentationStyle = .pageSheet
-			
-			if let presentationController = hostingController.presentationController as? UISheetPresentationController {
-				let detent2: UISheetPresentationController.Detent = ._detent(withIdentifier: "Test2", constant: 200.0)
-				presentationController.detents = [detent2]
-				presentationController.prefersGrabberVisible = true
-			}
-			
-			DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-				self.present(hostingController, animated: true)
-			}
-			
-		} catch {
-			self.installer?.shutdownServer()
-			self.installer = nil
-		}
-	}
-	
 }
