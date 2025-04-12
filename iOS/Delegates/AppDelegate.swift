@@ -13,12 +13,213 @@ import Nuke
 import SwiftUI
 import UIKit
 import UIOnboarding
+import ZIPFoundation
 
+typealias IdevicePairingFile = OpaquePointer
+typealias TcpProviderHandle = OpaquePointer
+typealias HeartbeatClientHandle = OpaquePointer
+typealias InstallationProxyClientHandle = OpaquePointer
+typealias AfcClientHandle = OpaquePointer
+typealias AfcFileHandle = OpaquePointer
+
+func startInstallation(ipaPath: String, completion: @escaping (IdeviceErrorCode?) -> Void) {
+    idevice_init_logger(IdeviceLogLevel.init(4), Disabled, nil)
+    DispatchQueue.global(qos: .userInitiated).async {
+        var afcClient: AfcClientHandle?
+        var fileHandle: AfcFileHandle?
+        
+        var error = afc_client_connect_tcp(provider, &afcClient)
+        guard error == IdeviceSuccess else {
+            print("Failed to connect to AFC service: \(error)")
+            return
+        }
+        
+        print("Connected to AFC service")
+        
+        error = afc_make_directory(afcClient, "PublicStaging")
+        if error != IdeviceSuccess {
+            print("Failed to create PublicStaging directory: \(error)")
+            return
+        }
+        
+        print("PublicStaging directory created or already exists \(ipaPath)")
+        
+        let parentURL = URL(fileURLWithPath: ipaPath).deletingLastPathComponent()
+        
+        do {
+            try FileManager.default.copyItem(atPath: ipaPath, toPath: parentURL.appendingPathComponent("Payload").path)
+            
+            try FileManager.default.zipItem(at: parentURL.appendingPathComponent("Payload"), to: parentURL.appendingPathComponent("app.ipa"))
+        } catch {
+            print(error.localizedDescription)
+            return
+        }
+        
+        let uuidstring = UUID().uuidString
+        error = afc_file_open(afcClient, "/PublicStaging/\(uuidstring).ipa", AfcWrOnly, &fileHandle)
+        guard error == IdeviceSuccess else {
+            print("Failed to open file for writing: \(error)")
+            return
+        }
+        
+        print("Opened /PublicStaging/whatever.ipa for writing")
+        
+        var ipaData = Data()
+        do {
+            ipaData = try Data(contentsOf: parentURL.appendingPathComponent("app.ipa"))
+        } catch {
+            print("Error reading file: \(error)")
+            return
+        }
+        
+        ipaData.withUnsafeBytes { (bytes: UnsafeRawBufferPointer) -> Void in
+            let pointer = bytes.baseAddress?.assumingMemoryBound(to: UInt8.self)
+            error = afc_file_write(fileHandle, pointer, ipaData.count)
+            if error != IdeviceSuccess {
+                print("Failed to write IPA data: \(error)")
+                return
+            }
+            print("Wrote \(ipaData.count) bytes to IPA file")
+        }
+        
+        do {
+            try FileManager.default.removeItem(at: parentURL.appendingPathComponent("app.ipa"))
+            
+            try FileManager.default.removeItem(at: parentURL.appendingPathComponent("Payload"))
+        } catch {
+            print(error.localizedDescription)
+            return
+        }
+        
+        
+        if fileHandle != nil {
+            error = afc_file_close(fileHandle)
+            fileHandle = nil
+            guard error == IdeviceSuccess else {
+                print("Failed to close file: \(error)")
+                return
+            }
+            print("Closed IPA file")
+        }
+        
+        print("IPA installation initiated")
+        
+        var installproxy: InstallationProxyClientHandle?
+        let err = installation_proxy_connect_tcp(provider, &installproxy)
+        if err != IdeviceSuccess {
+            completion(err)
+            return
+        }
+        
+        let err2 = "/PublicStaging/\(uuidstring).ipa".withCString { cString in
+            return installation_proxy_install(installproxy, cString, nil)
+        }
+        
+        if err2 != IdeviceSuccess {
+            completion(err2)
+        } else {
+            completion(nil)
+        }
+    }
+}
+
+var provider: TcpProviderHandle?
 var downloadTaskManager = DownloadTaskManager.shared
 class AppDelegate: UIResponder, UIApplicationDelegate, UIOnboardingViewControllerDelegate {
     static let isSideloaded = Bundle.main.bundleIdentifier != "kh.crysalis.feather"
     var window: UIWindow?
     var loaderAlert = presentLoader()
+    
+    func establishHeartbeat(_ completion: @escaping (IdeviceErrorCode?) -> Void) {
+        var addr = sockaddr_in()
+        memset(&addr, 0, MemoryLayout<sockaddr_in>.size)
+        addr.sin_family = sa_family_t(AF_INET)
+        addr.sin_port = CFSwapInt16HostToBig(UInt16(LOCKDOWN_PORT))
+        
+        guard inet_pton(AF_INET, "10.7.0.1", &addr.sin_addr) == 1 else {
+            print("ERROR: Invalid IP address")
+            completion(UnknownErrorType)
+            return
+        }
+
+        var pairingFile: IdevicePairingFile?
+        let err = idevice_pairing_file_read(getDocumentsDirectory().appendingPathComponent("pairing.plist").path, &pairingFile)
+        if err != IdeviceSuccess {
+            print("ERROR: Failed to read pairing file: \(err)")
+            completion(err)
+            return
+        }
+        
+        withUnsafePointer(to: &addr) {
+            $0.withMemoryRebound(to: sockaddr.self, capacity: 1) { sockaddrPointer in
+                let providerError = idevice_tcp_provider_new(sockaddrPointer, pairingFile, "SS-Provider", &provider)
+                if providerError != IdeviceSuccess {
+                    print("Failed to create TCP provider: \(providerError)")
+                    completion(providerError)
+                    return
+                }
+            }
+        }
+        
+        var heartbeatClient: HeartbeatClientHandle?
+        let heartbeatError = heartbeat_connect_tcp(provider, &heartbeatClient)
+        if heartbeatError != IdeviceSuccess {
+            print("ERROR: Failed to start heartbeat Client")
+            completion(heartbeatError)
+            return
+        }
+
+        completion(nil)
+        
+        var currentInterval: UInt64 = 5
+
+        while true {
+            var newInterval: UInt64 = 0
+
+            let err = heartbeat_get_marco(heartbeatClient, currentInterval, &newInterval)
+            if err != IdeviceSuccess {
+                heartbeat_client_free(heartbeatClient)
+                lbStartHB()
+                return
+            }
+
+
+            currentInterval = newInterval + 1
+
+            let sendErr = heartbeat_send_polo(heartbeatClient)
+            if sendErr != IdeviceSuccess {
+                heartbeat_client_free(heartbeatClient)
+                lbStartHB()
+                return
+            }
+        }
+    }
+    
+    var heartbeatThread: Thread?
+    
+    func startHeartbeat(_ completion: @escaping (IdeviceErrorCode?) -> Void) {
+        heartbeatThread = Thread {
+            self.establishHeartbeat { err in
+                completion(err)
+            }
+        }
+        
+        guard let heartbeatThread else {
+            return
+        }
+        
+        heartbeatThread.qualityOfService = .background
+        heartbeatThread.name = "idevice-heartbeat"
+        heartbeatThread.start()
+    }
+
+    func lbStartHB() {
+        startHeartbeat { er in
+            if er != nil {
+                self.lbStartHB()
+            }
+        }
+    }
 
     func application(_: UIApplication, didFinishLaunchingWithOptions _: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         let userDefaults = UserDefaults.standard
@@ -31,10 +232,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UIOnboardingViewControlle
 
 		createSourcesDirectory()
         addDefaultRepos()
-		giveUserDefaultSSLCerts()
         imagePipline()
         setupLogFile()
         cleanTmp()
+        lbStartHB()
 
         window = UIWindow(frame: UIScreen.main.bounds)
 
@@ -278,13 +479,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UIOnboardingViewControlle
             }
         }
     }
-	
-	fileprivate func giveUserDefaultSSLCerts() {
-		if !Preferences.gotSSLCerts {
-			getCertificates()
-			Preferences.gotSSLCerts = true
-		}
-	}
 
     fileprivate static func generateRandomString(length: Int = 8) -> String {
         let characters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
@@ -418,4 +612,8 @@ extension UIOnboardingViewConfiguration {
             buttonConfiguration: .init(title: String.localized("ONBOARDING_CONTINUE_BUTTON"), backgroundColor: .tintColor)
         )
     }
+}
+
+func getDocumentsDirectory() -> URL {
+    return FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
 }

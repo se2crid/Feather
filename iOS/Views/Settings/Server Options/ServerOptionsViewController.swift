@@ -120,11 +120,7 @@ extension ServerOptionsViewController {
 			resetConfigDefault()
 		case String.localized("SETTINGS_VIEW_CONTROLLER_CELL_UPDATE_LOCAL_CERTIFICATE"):
 			if !isDownloadingCertifcate {
-				isDownloadingCertifcate = true
-				defer {
-					isDownloadingCertifcate = false
-				}
-				getCertificates()
+                isDownloadingCertifcate = false
 			}
 		default:
 			break

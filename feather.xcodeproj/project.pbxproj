@@ -16,7 +16,6 @@
 		33BDD0A02C76D06900AF6169 /* UIOnboarding.md in Resources */ = {isa = PBXBuildFile; fileRef = 33BDD09F2C76D06900AF6169 /* UIOnboarding.md */; };
 		33BDD0A22C76D0FB00AF6169 /* Ellekit.md in Resources */ = {isa = PBXBuildFile; fileRef = 33BDD0A12C76D0FB00AF6169 /* Ellekit.md */; };
 		33BDD0A62C76EA4200AF6169 /* UIOnboarding in Frameworks */ = {isa = PBXBuildFile; productRef = 33BDD0A52C76EA4200AF6169 /* UIOnboarding */; };
-		33BDD0C02C7866FE00AF6169 /* Vapor in Frameworks */ = {isa = PBXBuildFile; productRef = 33BDD0BF2C7866FE00AF6169 /* Vapor */; };
 		33BE87A52C72E1220044D245 /* SWCompression in Frameworks */ = {isa = PBXBuildFile; productRef = 33BE87A42C72E1220044D245 /* SWCompression */; };
 		33BE87A72C72F5720044D245 /* SWCompression.md in Resources */ = {isa = PBXBuildFile; fileRef = 33BE87A62C72F5720044D245 /* SWCompression.md */; };
 		33BF31672C7C05840087F3D2 /* Foundation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33BF31662C7C05840087F3D2 /* Foundation.swift */; };
@@ -95,7 +94,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				33BDD0C02C7866FE00AF6169 /* Vapor in Frameworks */,
 				3322FF4F2BFEE5B9001768D8 /* Nuke in Frameworks */,
 				33BE87A52C72E1220044D245 /* SWCompression in Frameworks */,
 				AA280D952C76AB7400CAC838 /* MobileCoreServices.framework in Frameworks */,
@@ -215,7 +213,6 @@
 				336EEE802C32367C0011188D /* ZIPFoundation */,
 				33BE87A42C72E1220044D245 /* SWCompression */,
 				33BDD0A52C76EA4200AF6169 /* UIOnboarding */,
-				33BDD0BF2C7866FE00AF6169 /* Vapor */,
 			);
 			productName = feather;
 			productReference = 33BA378B2BF8159F00FF530A /* feather.app */;
@@ -261,7 +258,6 @@
 				336EEE7F2C32367C0011188D /* XCRemoteSwiftPackageReference "ZIPFoundation" */,
 				33BE87A32C72E1220044D245 /* XCRemoteSwiftPackageReference "SWCompression" */,
 				33BDD0A42C76EA4100AF6169 /* XCRemoteSwiftPackageReference "UIOnboarding-18" */,
-				33BDD0BE2C7866FE00AF6169 /* XCRemoteSwiftPackageReference "vapor" */,
 			);
 			preferredProjectObjectVersion = 56;
 			productRefGroup = 33BA378C2BF8159F00FF530A /* Products */;
@@ -594,14 +590,6 @@
 				kind = branch;
 			};
 		};
-		33BDD0BE2C7866FE00AF6169 /* XCRemoteSwiftPackageReference "vapor" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/vapor/vapor";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 4.104.0;
-			};
-		};
 		33BE87A32C72E1220044D245 /* XCRemoteSwiftPackageReference "SWCompression" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/tsolomko/SWCompression";
@@ -658,11 +646,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 33BDD0A42C76EA4100AF6169 /* XCRemoteSwiftPackageReference "UIOnboarding-18" */;
 			productName = UIOnboarding;
-		};
-		33BDD0BF2C7866FE00AF6169 /* Vapor */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 33BDD0BE2C7866FE00AF6169 /* XCRemoteSwiftPackageReference "vapor" */;
-			productName = Vapor;
 		};
 		33BE87A42C72E1220044D245 /* SWCompression */ = {
 			isa = XCSwiftPackageProductDependency;

@@ -5,5 +5,7 @@
 #include "UISheetPresentationControllerDetent+Private.h"
 #include "LSApplicationWorkspace.h"
 
+#include "idevice.h"
+
 #include "zsign.hpp"
 #include "openssl_tools.hpp"
